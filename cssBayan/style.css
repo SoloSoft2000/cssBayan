@@ -1,0 +1,18 @@
+body {
+    background-color: antiquewhite;
+}
+
+.icon-menu {
+    background: url(/icons/menu-option.svg);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+}
+
+.icon-menu:hover {
+    background: url(/icons/delete-button.svg) center;
+    background-repeat: no-repeat;
+    /* width: 30px;
+    height: 30px; */
+    background-size: 15px 15px;
+}
