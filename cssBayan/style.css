@@ -14,6 +14,10 @@ h1 {
     text-align: center;
 }
 
+span {
+    font-size: 24px;
+    font-weight: bold;
+}
 .accordeon {
     border: 1px solid black;
     width: 70%;
@@ -22,6 +26,7 @@ h1 {
 
 img {
     display: block;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     height: 280px;
@@ -56,7 +61,7 @@ img {
     height: 300px;
 }
 
-.accordeon:hover span::after {
+.accordeon:hover i {
     content: "";
     background-image: url(./icons/menu-option.svg);
     background-size: 20px 20px;
@@ -68,7 +73,7 @@ img {
     float: right;
 }
 
-.accordeon span::after {
+.accordeon i {
     content: "";
     width: 20px;
     height: 20px;
@@ -78,9 +83,9 @@ img {
     float: right;
 }
 
-.item:hover span::after,
-.item-input:hover ~ span::after,
-.item-input:checked ~ span::after {
+.item:hover i,
+.item-input:hover ~ i,
+.item-input:checked ~ i {
     background-image: url(./icons/delete-button.svg);
     background-size: 12px 12px;
     background-position: center;
