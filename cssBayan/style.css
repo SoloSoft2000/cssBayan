@@ -51,12 +51,12 @@ img {
     cursor: pointer;
 }
 
-.item-input:checked ~ .item-context {
+.item-input:checked+.item-title .item-context {
     transition: all 0.5s ease-in;
     height: 300px;
 }
 
-.accordeon:hover .item-title::after {
+.accordeon:hover span::after {
     content: "";
     background-image: url(./icons/menu-option.svg);
     background-size: 20px 20px;
@@ -68,9 +68,19 @@ img {
     float: right;
 }
 
-.item:hover .item-title::after,
-.item-input:hover ~ .item-title::after,
-.item-input:checked ~ .item-title::after {
+.accordeon span::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+.item:hover span::after,
+.item-input:hover ~ span::after,
+.item-input:checked ~ span::after {
     background-image: url(./icons/delete-button.svg);
     background-size: 12px 12px;
     background-position: center;
