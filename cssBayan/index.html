@@ -4,42 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accordion</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="all_document">
-        <div class="wrapper">
-            <h1>CSS Bayan</h1>
-            <hr>
-            <div class="accordion">
-                <div class="acc-item">
-                    <div class="icon-menu"></div>
-                    <div class="acc-image">
-                        <img src="/images/f12browser.webp" alt="">
-                    </div>
+    <div class="wrapper">
+        <h1>CSS Bayan</h1>
+        <div class="accordeon">
+            <div class="item">
+                <input class="item-input" type="radio" checked name="acc" id="first">
+                <label for="first" class="item-title">First element</label>
+                <div class="item-context">
+                    <img src="./images/f12browser.webp" alt="">
                 </div>
-                <div class="acc-item">
-                    <div class="icon-menu"></div>
-                    <div class="acc-image">
-                        <img src="/images/mainmaster.webp" alt="">
-                    </div>
+            </div>
+            <div class="item">
+                <input class="item-input" type="radio" name="acc" id="second">
+                <label for="second" class="item-title">Second element</label>
+                <div class="item-context">
+                    <img src="./images/mainmaster.webp" alt="">
                 </div>
-                <div class="acc-item">
-                    <div class="icon-menu"></div>
-                    <div class="acc-image">
-                        <img src="/images/skeleton.webp" alt="">
-                    </div>
+            </div>
+            <div class="item">
+                <input class="item-input" type="radio" name="acc" id="three">
+                <label for="three" class="item-title">Three element</label>
+                <div class="item-context">
+                    <img src="./images/skeleton.webp" alt="">
                 </div>
-                <div class="acc-item">
-                    <div class="icon-menu"></div>
-                    <div class="acc-image">
-                        <img src="/images/testApp.webp" alt="">
-                    </div>
+            </div>
+            <div class="item">
+                <input class="item-input" type="radio" name="acc" id="four">
+                <label for="four" class="item-title">Four element</label>
+                <div class="item-context">
+                    <img src="./images/testApp.webp" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <input class="item-input" type="radio" name="acc" id="five">
+                <label for="five" class="item-title">Five element</label>
+                <div class="item-context">
+                    <img src="./images/userexp.webp" alt="">
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
 </html>

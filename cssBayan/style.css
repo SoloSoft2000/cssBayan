@@ -1,35 +1,91 @@
 body {
     background-color: antiquewhite;
+    overflow: hidden;
 }
 
 .wrapper {
     width: 1222px;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-.icon-menu {
-    background: url(/icons/menu-option.svg);
-    width: 30px;
-    height: 30px;
-    background-size: 30px 30px;
 }
 
-.icon-menu:hover {
-    background: url(/icons/delete-button.svg) center;
-    background-repeat: no-repeat;
-    /* width: 30px;
-    height: 30px; */
-    background-size: 15px 15px;
+h1 {
+    margin: 25px auto;
+    text-align: center;
 }
 
-.acc-image {
-    width: 100%;
-    
+.accordeon {
+    border: 1px solid black;
+    width: 70%;
+    margin: auto;
 }
 
-.acc-image img {
-    width: 350px;
+img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 280px;
+  }
+
+.item {
+    border-top: 3px solid blue;
+    margin: 3px;
+}
+
+.item-title {
+    display: block;
+    padding: 10px;
+    transition: transform .3s;
+}
+
+.item:hover  .item-context, .item-title:hover  .item-context {
+    transition: all 0.5s ease-in;
+    height: 300px;
+}
+
+.item:active {
+    opacity: 0.5;
+}
+
+.item, .item-title, .item-context {
+    cursor: pointer;
+}
+
+.item-input:checked ~ .item-context {
+    transition: all 0.5s ease-in;
+    height: 300px;
+}
+
+.accordeon:hover .item-title::after {
+    content: "";
+    background-image: url(./icons/menu-option.svg);
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+.item:hover .item-title::after,
+.item-input:hover ~ .item-title::after,
+.item-input:checked ~ .item-title::after {
+    background-image: url(./icons/delete-button.svg);
+    background-size: 12px 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.item-context {
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    height: 0px;
 }
