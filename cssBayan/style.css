@@ -3,13 +3,13 @@ body {
     overflow-y: scroll;
     overflow-x: visible;
     min-width: 320px;
+    max-width: 1920px;
     /* font-size: 8px; */
 }
 
 
 
 .wrapper {
-    /* width:80%; */
     margin-left: auto;
     margin-right: auto;
 }
@@ -21,12 +21,12 @@ h1 {
 }
 
 span {
-    font-size: 1.7rem;
+    font-size: 1.0rem;
     font-weight: bold;
 }
 .accordeon {
     border: 5% solid black;
-    width: 60%;
+    width: 75%;
     margin: auto;
 }
 
@@ -35,7 +35,6 @@ img {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
-    height: 15rem;
   }
 
 .item {
@@ -111,10 +110,17 @@ img {
     height: 0px;
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
     .wrapper {
-      width: 1222px;
+      width: 80%;
     }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 20rem;
+    }
+    img {
+        height: 17rem;
+    }
+
     html {
         font-size: 16px;
         color: black;
@@ -123,20 +129,34 @@ img {
 
 @media (min-width: 820px) and (max-width: 1439px) {
     .wrapper {
-      width: 668px;
+      width: 88%;
     }
     html {
         font-size: 12px;
         color: dimgrey;
     }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 21rem;
+    }
+    img {
+        height: 20rem;
+    }
+
 }
 
- @media (min-width: 320px) and (max-width: 819px) {
+ @media (min-width: 310px) and (max-width: 819px) {
     .wrapper {
-      width: 300px;
+      width: 92%;
     }
     html {
         font-size: 8px;
         color: darkgray;
     }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 16rem;
+    }
+    img {
+        height: 15rem;
+    }
+
 }
