@@ -1,0 +1,162 @@
+body {
+    background-color: antiquewhite;
+    overflow-y: scroll;
+    overflow-x: visible;
+    min-width: 320px;
+    max-width: 1920px;
+    /* font-size: 8px; */
+}
+
+
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    margin: 2rem auto;
+    text-align: center;
+    font-size: 3rem;
+}
+
+span {
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+.accordeon {
+    border: 5% solid black;
+    width: 75%;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.item {
+    border-top: 0.3rem solid blue;
+    margin: 0.3rem;
+}
+
+.item-title {
+    display: block;
+    padding: 1rem;
+    transition: transform .3s;
+}
+
+.item:hover  .item-context, .item-title:hover  .item-context {
+    transition: all 0.5s ease-in;
+    height: 20rem;
+}
+
+.item:active {
+    opacity: 0.5;
+}
+
+.item, .item-title, .item-context {
+    cursor: pointer;
+}
+
+.item-input:checked+.item-title .item-context {
+    transition: all 0.5s ease-in;
+    height: 20rem;
+}
+
+.accordeon:hover i {
+    content: "";
+    background-image: url(./icons/menu-option.svg);
+    background-size: 2rem 2rem;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+.accordeon i {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    float: right;
+}
+
+.item:hover i,
+.item-input:hover ~ i,
+.item-input:checked ~ i {
+    background-image: url(./icons/delete-button.svg);
+    background-size: 1rem 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-input {
+    width: 0;
+    height: 0;
+    appearance: none;
+    position: absolute;
+}
+
+.item-context {
+    transition: all 0.5s ease-out;
+    overflow: hidden;
+    height: 0px;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+    .wrapper {
+      width: 80%;
+    }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 20rem;
+    }
+    img {
+        height: 17rem;
+    }
+
+    html {
+        font-size: 16px;
+        color: black;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 1439px) {
+    .wrapper {
+      width: 88%;
+    }
+    html {
+        font-size: 12px;
+        color: dimgrey;
+    }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 21rem;
+    }
+    img {
+        height: 20rem;
+    }
+
+}
+
+ @media (min-width: 310px) and (max-width: 819px) {
+    .wrapper {
+      width: 92%;
+    }
+    html {
+        font-size: 8px;
+        color: darkgray;
+    }
+    .item:hover  .item-context, .item-title:hover  .item-context {
+        height: 16rem;
+    }
+    img {
+        height: 15rem;
+    }
+
+}
